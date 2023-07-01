@@ -1,13 +1,19 @@
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:tcp://localhost/~/h2/dbs/test
+    #url: jdbc:h2:tcp://localhost/~/h2/dbs/test
+    url: jdbc:h2:mem:test
     username: sa
     password: '{cipher}AQBeoLvah4tJS0Uk1zYp0++lDm3m+/A479X71XOQdqGEQD5L9pZQq7QzJ0aqvwJyNPeYEcGd/0mU7sycLXaIx4KHzA1dfELZ0mhhQ0oQ0lUPNX1c1btPCAlJT+DNPubqfWZiNGZ+o9qYBA7uO4o8+G33Xp42lvUTikGfbBcf1CTB5z9t0DyfvrMfk4kWege4TOyZpUfzf8JVEgGlAhFTtq15/Yemoh4kZ+2JDwxQTSB/Kyh8AS0dyOJ+vGOVbXX5tLmbnmAqG6z8+TuvQ2mj0O/05TNkKu3DRaocAxKG1R/F4R5Cg7sayVNSzNNDxW0Ktmygvq3vOFhU7ezleg1RP7uJhmYU8/X+dLNQZKVD9UXPD1wLf4dsMWVx6MarNf3Pl/A='
 token:
   expiration_time: 86400000
   secret: 6v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-Ev78q(*u$@h%)Sdk@%*df930-452J*I)@*$skdfst#(oeskejf13854ry@)*$#
-  # secret: '{cipher}AQAAsdTAItf9OjakE8LPP44cAN8pgKDBrWtO53RAeAVNNDhSPKPdve9BWgKVLe0ggoT8OzbirdiwrdqdRQnR3RKLIQOIrbk7mwHyyjbB145Eyl3UtnyH82pBmzjK3qroLERlu+aM7i4WeJkwmVf9hus7g7krP07YkLyfSzwSRQUrMmbdf57kOF+WeDKQu2D9bK718V5o/ucO6BjxBNBqafr1VP+ftwqHr5nUAStsphKY7nb/LOt7iUg7+w9sJOQ5HiyWl+hHRHfogQ4bKtwRylwHkoiINEQh6GUQ9AdmJwiEkmhYLeTEQSh66bCDCrg5KgNzViwqj6BeSKVyx7MYzjWhT4BX85guJ9yihalDiLOtU6jwN1n9mzA1gkRd6QQp6SiFlr3B5aL1+cjafTQwV7rd'
 
 gateway:
   ip: 192.168.229.128
+
+order_service:
+  # url: http://127.0.0.1:8000/order-service/%s/orders
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception: 
+    orders_is_empty: User's order is Empty.
